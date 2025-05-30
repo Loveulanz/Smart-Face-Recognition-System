@@ -88,12 +88,9 @@ Make sure haarcascade_frontalface_default.xml is in the root folder.
 
 Capture training images using the "Capture Screen" before training a new model.
 
-### 👨‍💻 Developed By
-
+##👨‍💻 Developed By
 PAWAN YADAV
-
 AI Engineer | 2025
-
 📧 Contact: yaduvanshi2000pawan@gmail.com
 
 ## 📜 License
