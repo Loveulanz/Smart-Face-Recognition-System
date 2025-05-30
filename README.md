@@ -1,110 +1,131 @@
-### Smart Face Recognition System
-This is a GUI-based Smart Face Recognition System built using Python, Tkinter, OpenCV, and scikit-learn. The system can:
+👁️ Smart Face Recognition System using Machine Learning
+This is a GUI-based Smart Face Recognition System built using Python, Tkinter, OpenCV, and Machine Learning techniques. It can recognize faces in images, video files, and real-time webcam feeds, and also supports capturing new training data via webcam.
 
-Detect and recognize faces from images, videos, and webcam feed
+🔍 Features
+📷 Recognize faces in uploaded images
 
-Capture images for training dataset
+🎞️ Recognize faces from video files
 
-Train a face recognition model using PCA and Logistic Regression
+📹 Real-time face recognition using webcam
 
-## 💡 Features
+🧠 Train and predict using PCA + Logistic Regression model
 
-📷 Image-based face detection and recognition
+🖼️ Capture 500 images for a new user and store them in dataset
 
-🎥 Video file-based face recognition
+🔐 Integrated simple login system
 
-🎦 Real-time face recognition using webcam
+🖥️ Interactive GUI made with Tkinter
 
-🧠 Face model training using PCA + Logistic Regression
+💾 Save trained model and PCA object for future use
 
-📁 Save training images per person name
+🛠️ Technologies Used
+Python
 
-🎮 Simple and interactive Tkinter GUI
+Tkinter (GUI)
 
-🛠️ Requirements
-Install the required dependencies using pip:
+OpenCV (Computer Vision)
 
-       pip install opencv-python numpy pillow scikit-learn 
-       
-📁 Folder Structure
+PIL (Image Handling)
 
-          project/
-│
-├── images/                     # Folder where captured faces will be stored
-├── haarcascade_frontalface_default.xml   # Haar cascade for face detection
-├── face_model.pkl              # Trained face recognition model (optional)
-├── face_pca.pkl                # Trained PCA object (optional)
-├── smart_face_recognition.py   # Main Python file
-└── README.md                   # This file
+Scikit-learn (Machine Learning)
 
+Joblib (Model Serialization)
 
-🚀 How to Run
-Capture Training Images
-Run the program and select "Start Camera" under Capture Screen, then enter your name and capture images. 500 images will be saved for training.
+Haar Cascade (Face Detection)
 
-Train the Model (optional)
-You can train a model using the captured images (not included in code, but assumed to be trained externally using PCA + Logistic Regression). Save the model as face_model.pkl and PCA as face_pca.pkl.
-
-Recognize Faces
-
-Use Image Mode to browse and recognize faces in an image.
-
-Use Video Mode to recognize faces in a video file.
-
-Use Webcam Mode for real-time face recognition.
-
-🧠 Model Training (Basic Idea)
-Convert face images to grayscale and resize (e.g., 40x40 or 100x100).
-
-Flatten the images into 1D arrays.
-
-Apply PCA for dimensionality reduction.
-
-Train a LogisticRegression model using the reduced data.
-
-Save both the trained model and PCA object using joblib or pickle.
-
-python
+📁 Project Structure
+bash
 Copy
 Edit
-from sklearn.decomposition import PCA
-from sklearn.linear_model import LogisticRegression
-import joblib
+Smart-Face-Recognition-System/
+│
+├── images/                              # Captured images for training (per user)
+├── haarcascade_frontalface_default.xml # Haar Cascade model for face detection
+├── face_model.pkl                       # Trained face recognition model
+├── face_pca.pkl                         # Saved PCA object
+├── app.py                               # Main application code
+├── screenshots/                         # UI screenshots
+│   ├── login_page.png
+│   ├── main_menu.png
+│   ├── image_recognition.png
+├── README.md                            # Project documentation
+🚀 Getting Started
+1. Clone the Repository
+bash
+Copy
+Edit
+https://github.com/2000pawan/Smart-Face-Recognition-System.git
+cd Smart-Face-Recognition-System
+2. Install Dependencies
+Ensure you have Python 3 installed. Then, install the required libraries:
 
-# Assuming X_train contains flattened grayscale face images
-pca = PCA(n_components=100)
-X_reduced = pca.fit_transform(X_train)
+bash
+Copy
+Edit
+pip install opencv-python Pillow numpy scikit-learn joblib
+3. Run the Application
+bash
+Copy
+Edit
+python app.py
+4. Login Credentials
+Username: admin
 
-model = LogisticRegression(max_iter=1000)
-model.fit(X_reduced, y_train)
+Password: admin
 
-joblib.dump(model, 'face_model.pkl')
-joblib.dump(pca, 'face_pca.pkl')
-📸 Sample GUI Screens
-Main Menu: Choose Image, Video, Webcam, or Capture
+🧠 How the Model Works
+The system uses:
 
-Image Detection: Browse an image and detect faces
+PCA (Principal Component Analysis) for dimensionality reduction
 
-Video Detection: Play and detect faces in a video
+Logistic Regression for face classification
 
-Webcam Detection: Real-time face recognition
+Steps:
 
-Capture Screen: Capture 500 face images for a new user
+Captured images are converted to grayscale and resized.
+
+PCA reduces high-dimensional face vectors.
+
+Logistic Regression predicts the identity.
+
+face_model.pkl and face_pca.pkl contain the trained classifier and PCA transformer.
+
+To train your own model, use the Gender_Prediction.ipynb format for guidance.
+
+🖼️ Screenshots
+🔐 Login Page
+
+🏠 Main Menu
+
+🖼 Image Recognition Example
+
+📦 Sample Output
+For every detected face, the application displays:
+
+A bounding box
+
+Predicted person name
+
+The system supports detection in:
+
+Static images
+
+Pre-recorded video
+
+Real-time webcam stream
 
 📌 Notes
-Make sure haarcascade_frontalface_default.xml is in the working directory.
+Make sure haarcascade_frontalface_default.xml is in the root folder.
 
-You must pre-train and save the model and PCA before using recognition features.
+Pre-trained models (face_model.pkl, face_pca.pkl) must exist to use recognition features.
 
-You can improve accuracy using CNNs or modern deep learning approaches in future versions.
+Capture training images using the "Capture Screen" before training a new model.
 
 👨‍💻 Developed By
 PAWAN YADAV
-
-(AI Engineer) | 2025
-
+AI Engineer | 2025
 📧 Contact: yaduvanshi2000pawan@gmail.com
 
 📜 License
-This project is provided for educational purposes only.
+This project is licensed under the MIT License – feel free to use and modify for personal or academic purposes.
 
