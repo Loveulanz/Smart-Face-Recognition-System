@@ -1,8 +1,9 @@
-👁️ Smart Face Recognition System using Machine Learning
+### 👁️ Smart Face Recognition System using Machine Learning
 
 This is a GUI-based Smart Face Recognition System built using Python, Tkinter, OpenCV, and Machine Learning techniques. It can recognize faces in images, video files, and real-time webcam feeds, and also supports capturing new training data via webcam.
 
-🔍 Features
+### 🔍 Features
+
 📷 Recognize faces in uploaded images
 
 🎞️ Recognize faces from video files
