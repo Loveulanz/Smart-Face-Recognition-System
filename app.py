@@ -210,7 +210,7 @@ def start_capture():
         imgtk = ImageTk.PhotoImage(image=img)
         lmain.imgtk = imgtk
         lmain.configure(image=imgtk)
-        if(img_no==501):
+        if(img_no==1001):
             stop()
             return
         lmain.after(50,temp) #calls show_frame after 10 mills
