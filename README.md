@@ -77,11 +77,17 @@ Ensure you have Python 3 installed. Then, install the required libraries:
 ## 🖼️ Screenshots
 
 ### 🔐 Login Page
+![Login Page](login.png)
 
 ### 🏠 Main Menu
+![Main Menu](main.png)
 
 ### 📦 Sample Output
+![Prediction](image_prediction.png)
 
+![Prediction](image_prediction1.png)
+
+![Prediction](image_prediction2.png)
 
 ## 📌 Notes
 Make sure haarcascade_frontalface_default.xml is in the root folder.
