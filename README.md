@@ -6,14 +6,11 @@ This is a GUI-based Smart Face Recognition System built using Python, Tkinter, O
 
 ## 🔍 Features
 
- - 📷 Recognize faces in uploaded images
- - 🎞️ Recognize faces from video files
  - 📹 Real-time face recognition using webcam
  - 🧠 Train and predict using PCA + Logistic Regression model
- - 🖼️ Capture 500 images for a new user and store them in dataset
+ - 🖼️ Capture 1000 images for a new user and store them in dataset
  - 🔐 Integrated simple login system
  - 🖥️ Interactive GUI made with Tkinter
- - 💾 Save trained model and PCA object for future use
 
 --- 
 
@@ -24,7 +21,6 @@ This is a GUI-based Smart Face Recognition System built using Python, Tkinter, O
  - OpenCV (Computer Vision)
  - PIL (Image Handling)
  - Scikit-learn (Machine Learning)
- - Joblib (Model Serialization)
  - Haar Cascade (Face Detection)
 
 --- 
@@ -32,10 +28,8 @@ This is a GUI-based Smart Face Recognition System built using Python, Tkinter, O
 ## 📁 Project Structure
         Smart-Face-Recognition-System/
 
-            ├── images/                              # Captured images for training (per user)
+            ├── images/                              # Captured images folder collect images for training (per user)
             ├── haarcascade_frontalface_default.xml # Haar Cascade model for face detection
-            ├── face_model.pkl                       # Trained face recognition model
-            ├── face_pca.pkl                         # Saved PCA object
             ├── app.py                               # Main application code
             ├── screenshots/                         # UI screenshots
                │   ├── login_page.png
@@ -79,7 +73,6 @@ Ensure you have Python 3 installed. Then, install the required libraries:
       - PCA reduces high-dimensional face vectors.
       - Logistic Regression predicts the identity.
 
-   - To train your own model, use the Gender_Prediction.ipynb format for guidance.
 
 ## 🖼️ Screenshots
 
@@ -93,13 +86,14 @@ Ensure you have Python 3 installed. Then, install the required libraries:
 ## 📌 Notes
 Make sure haarcascade_frontalface_default.xml is in the root folder.
 
-Pre-trained models (face_model.pkl, face_pca.pkl) must exist to use recognition features.
-
 Capture training images using the "Capture Screen" before training a new model.
 
 ### 👨‍💻 Developed By
+
 PAWAN YADAV
+
 AI Engineer | 2025
+
 📧 Contact: yaduvanshi2000pawan@gmail.com
 
 ## 📜 License
