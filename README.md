@@ -1,6 +1,7 @@
 ### 👁️ Smart Face Recognition System using Machine Learning
 
-This is a GUI-based Smart Face Recognition System built using Python, Tkinter, OpenCV, and Machine Learning techniques. It can recognize faces in images, video files, and real-time webcam feeds, and also supports capturing new training data via webcam.
+This is a GUI-based Smart Face Recognition System built using Python, Tkinter, OpenCV, and Machine Learning techniques. 
+It can recognize faces in images, video files, and real-time webcam feeds, and also supports capturing new training data via webcam.
 
 --- 
 
@@ -83,11 +84,11 @@ Ensure you have Python 3 installed. Then, install the required libraries:
 ![Main Menu](main.png)
 
 ### 📦 Sample Output
-![Prediction](image_prediction.png)
-
 ![Prediction](image_prediction1.png)
 
 ![Prediction](image_prediction2.png)
+
+![Prediction](image_prediction3.png)
 
 ## 📌 Notes
 Make sure haarcascade_frontalface_default.xml is in the root folder.
